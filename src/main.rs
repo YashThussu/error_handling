@@ -1,6 +1,8 @@
 use std::fs;
 use std::io::{self,stdin,Read};
 
+mod option_error_prop;
+
 fn main() {
     
    let file_result=read_file();
@@ -11,6 +13,8 @@ fn main() {
     Err(error)=>eprintln!("Error encountered:{error:?}")
 
    };
+
+   option_error_prop::option_error();
     
 
 }
@@ -23,4 +27,6 @@ fn read_file()->Result<String,io::Error>{
     stdin().read_line(&mut input)?; // this terminates the code if it produces an error
 
     fs::read_to_string(input.trim())
+
+    
 }
