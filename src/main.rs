@@ -6,16 +6,20 @@ mod project;
 
 fn main() {
     
-   let file_result=read_file();
+   // let file_result=read_file();
 
-   match file_result {
+   // match file_result {
 
-    Ok(content)=>println!("{content}"),
-    Err(error)=>eprintln!("Error encountered:{error:?}")
+   //  Ok(content)=>println!("{content}"),
+   //  Err(error)=>eprintln!("Error encountered:{error:?}")
 
-   };
+   // };
 
+<<<<<<< HEAD
    option_error_prop::option_error();
+=======
+   // option_error_prop::option_error();
+>>>>>>> 590a1b7feb7c70b8673a3b2260b49633c81c1e70
 
    let write_result=project::write_to_file();
 
