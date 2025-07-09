@@ -1,20 +1,28 @@
 use std::fs;
-use std::io::{self,stdin,Read};
+use std::io::{self,stdin};
 
 mod option_error_prop;
+mod project;
 
 fn main() {
     
-   let file_result=read_file();
+   // let file_result=read_file();
 
-   match file_result {
+   // match file_result {
 
-    Ok(content)=>println!("{content}"),
-    Err(error)=>eprintln!("Error encountered:{error:?}")
+   //  Ok(content)=>println!("{content}"),
+   //  Err(error)=>eprintln!("Error encountered:{error:?}")
 
-   };
+   // };
 
-   option_error_prop::option_error();
+   // option_error_prop::option_error();
+
+   let write_result=project::write_to_file();
+
+   match write_result {
+      Ok(_)=>println!("Write Successful"),
+      Err(error)=>eprintln!("Error Encountered: {error}")
+   }
     
 
 }
